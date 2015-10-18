@@ -4,19 +4,19 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>63bd6a66-80c7-40e8-80e8-40e2c760c3e6</ProjectGuid>
+    <ProjectGuid>f2b73f01-9e09-4768-b16f-cb6d23e576b8</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <ProjectTypeGuids>{789894c7-04a9-4a11-a6b5-3f4435165112};{1b580a1a-fdb3-4b32-83e1-6407eb2722e6};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
-    <StartupFile>app.py</StartupFile>
+    <ProjectTypeGuids>{1b580a1a-fdb3-4b32-83e1-6407eb2722e6};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>server\run.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <LaunchProvider>Web launcher</LaunchProvider>
     <OutputPath>.</OutputPath>
-    <PythonWsgiHandler>{StartupModule}.wsgi_app</PythonWsgiHandler>
-    <Name>MyFlaskWeb</Name>
-    <RootNamespace>MyFlaskWeb</RootNamespace>
-    <InterpreterId>{98cebcce-a38d-4472-8a0f-76b45ca3b97e}</InterpreterId>
+    <PythonWsgiHandler>app.wsgi_app</PythonWsgiHandler>
+    <Name>FlaskBlog</Name>
+    <RootNamespace>FlaskBlog</RootNamespace>
+    <InterpreterId>{c7ba2a09-850e-46dd-9b04-177f10aaeb0f}</InterpreterId>
     <InterpreterVersion>3.5</InterpreterVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -28,16 +28,48 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="app.py" />
+    <Content Include="requirements.txt" />
+    <Content Include="server\app\config.py.template">
+      <SubType>Code</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="requirements.txt" />
-    <Content Include="script\angular.js" />
-    <Content Include="script\angular.min.js" />
+    <Folder Include="client\" />
+    <Folder Include="server\" />
+    <Folder Include="server\app\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="server\app\config.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\app\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\app\models.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\app\serializers.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\app\server.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\app\views.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\app\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\db_create.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\run.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env(32-bit)\">
-      <Id>{98cebcce-a38d-4472-8a0f-76b45ca3b97e}</Id>
+      <Id>{c7ba2a09-850e-46dd-9b04-177f10aaeb0f}</Id>
       <BaseInterpreter>{2af0f10d-7135-4994-9156-5d01c9c11b7e}</BaseInterpreter>
       <Version>3.5</Version>
       <Description>env(32-bit) (Python 3.5)</Description>
@@ -47,13 +79,6 @@
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
       <Architecture>X86</Architecture>
     </Interpreter>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="app\" />
-    <Folder Include="app\static\" />
-    <Folder Include="app\template\" />
-    <Folder Include="server\" />
-    <Folder Include="script\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
   <!-- Specify pre- and post-build commands in the BeforeBuild and 

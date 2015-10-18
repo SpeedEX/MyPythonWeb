@@ -1,0 +1,2 @@
+﻿DEBUG = True
+WTE_CSRF_ENABLE = False
