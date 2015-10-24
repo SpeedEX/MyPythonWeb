@@ -7,6 +7,8 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "MyFlaskWeb", "MyFlaskWeb\My
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "FlaskBlog", "FlaskBlog\FlaskBlog.pyproj", "{F2B73F01-9E09-4768-B16F-CB6D23E576B8}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "microblog", "microblog\microblog.pyproj", "{75052682-197A-4275-9983-713B048DDB0A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,8 @@ Global
 		{F2B73F01-9E09-4768-B16F-CB6D23E576B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2B73F01-9E09-4768-B16F-CB6D23E576B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2B73F01-9E09-4768-B16F-CB6D23E576B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75052682-197A-4275-9983-713B048DDB0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75052682-197A-4275-9983-713B048DDB0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
