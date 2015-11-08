@@ -21,6 +21,8 @@
     <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="app\templates\base.html" />
+    <Content Include="app\templates\index.html" />
     <Content Include="reademe.txt" />
     <Content Include="requirements.txt" />
   </ItemGroup>
@@ -31,6 +33,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app" />
+    <Folder Include="app\static\" />
+    <Folder Include="app\templates\" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env(32-bit)\">
